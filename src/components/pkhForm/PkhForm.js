@@ -1,9 +1,7 @@
 import React, { useState} from 'react';
-import { connect, useDispatch, } from 'react-redux';
-import pkhsActions from '../../redux/pkhs/pkhsActions';
+import { useDispatch, useSelector } from 'react-redux';
 import styles from './PkhForm.module.css';
 import balancOperetion from '../../redux/pkhs/transaction/operetion';
-// import { TezosToolkit } from '@taquito/taquito';
 
 const PkhForm = () => {
   const [inputValue, setInputValue] = useState("");
@@ -23,33 +21,29 @@ const PkhForm = () => {
     // .getBalance(this.state.name)
     // .then((balance) => console.log(balance.toNumber() / 1000000))
     // .catch((error) => console.log(JSON.stringify(error)));
-
   };
 
- 
-    // const { name } = this.state;
+
     return (
       <form className={styles.pkhForm} onSubmit={handleSubmit}>
         <label>
           <br />
           <input
-            style={{ borderRadius: 4 }}
-            name="name"
             type="text"
+            placeholder=" "
+            name="name"
             value={inputValue}
             onChange={changeHandler}
           />
         </label>
         <br />
         <br />
-        <button style={{ borderRadius: 4, padding: 4 }} type="submit">
+        <button 
+          type="submit">
           Add pkh
         </button>
       </form>
     );
-
 }
 
-export default connect(null, {
-  onSubmit: pkhsActions.addPkh,
-})(PkhForm);
+export default PkhForm;
