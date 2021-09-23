@@ -5,20 +5,20 @@ import PkhItem from '../pkhItem/PkhItem';
 
 
 const PkhList = () => {
-
-  const dispatch = useDispatch();
+const dataList = useSelector(({balanc})=> balanc.items)
+console.log('dataList :>> ', dataList);
 
   return (
 
     <ul>
-      {/* {pkhs &&
-        pkhs.map(pkh => (
+      {dataList &&
+        dataList.map(pkh => (
             <PkhItem
               pkh={pkh}
-              onRemovePkh={() => onRemovePkh(pkh.id)}
+              // onRemovePkh={() => onRemovePkh(pkh.id)}
             />
 
-        ))} */}
+        ))}
     </ul>
   );
 };

@@ -17,6 +17,12 @@ const balansSlice = createSlice({
       ...state,
       error: payload,
     }),
+    remove: (state, { payload }) =>(
+      {
+        ...state,
+        items: state.items.filter(({id}) => id !== payload)
+      }
+    )
   },
 });
 

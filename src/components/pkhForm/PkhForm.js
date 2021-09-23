@@ -1,7 +1,7 @@
 import React, { useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './PkhForm.module.css';
-import balancOperetion from '../../redux/pkhs/transaction/operetion';
+import {getBalanc} from '../../redux/pkhs/transaction/operetion';
 
 const PkhForm = () => {
   const [inputValue, setInputValue] = useState("");
@@ -14,7 +14,7 @@ const PkhForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(balancOperetion.getBalanc(inputValue))
+    dispatch(getBalanc(inputValue))
 
     // const Tezos = new TezosToolkit('https://mainnet-node.madfish.solutions');
     // Tezos.tz
