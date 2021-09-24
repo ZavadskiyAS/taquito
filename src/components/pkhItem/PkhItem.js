@@ -11,11 +11,11 @@ const PkhItem = ({ pkh }) => {
     <li className={styles.listItem}>
       <p className={styles.listItemP}>
         {/* {name}: {balans} */}
-        {pkh.balanc}
+        {pkh.id}
       </p>
       <p className={styles.listItemP}>
         {/* {name}: {balans} */}
-        {pkh.id}
+        {pkh.balanc}
       </p>
       <button
         className={styles.listItemButton}
