@@ -1,5 +1,25 @@
+.pkhWrap{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
 .pkhForm {
-  width: 220px;
+  display: flex;
+  justify-content: center;
+  /* background: #fff; */
+  width: 700px;
   padding: 5px;
   margin-bottom: 20px;
+}
+.pkhInput{
+  margin-right: 5%;
+  width: 500px;
+  height: 30px;
+  padding-left: 10px;
+}
+.pkhBtn{
+  width: 70px;
+  height: 30px;
+  background-color: rgb(218, 206, 206);
+
 }

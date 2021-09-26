@@ -10,7 +10,7 @@ import loaderSlice from './pkhs/transaction/slice';
 const persistConfig = {
     key: "session",
     storage,
-    whitelist: ['balanc'],
+    whitelist: ['balans'],
   };
 const rootReducer = combineReducers({
     // [sessionSlice.name]: persistReducer(persistConfig, sessionSlice.reducer),

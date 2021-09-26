@@ -9,13 +9,11 @@ const PkhItem = ({ pkh }) => {
   const onRemovePkh = ()=> dispatch(balansSlice.actions.remove(pkh.id))
   return (
     <li className={styles.listItem}>
-      <p className={styles.listItemP}>
-        {/* {name}: {balans} */}
-        {pkh.id}
+      <p className={styles.listItemId}>
+        <strong>{pkh.id}</strong>
       </p>
-      <p className={styles.listItemP}>
-        {/* {name}: {balans} */}
-        {pkh.balanc}
+      <p className={styles.listItemBalans}>
+        <strong>{pkh.balans}</strong>
       </p>
       <button
         className={styles.listItemButton}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import styles from './PkhForm.module.css';
-import {getBalanc} from '../../redux/pkhs/transaction/operetion';
+import {getBalans} from '../../redux/pkhs/transaction/operetion';
 
 const PkhForm = () => {
   const [inputValue, setInputValue] = useState("");
@@ -14,35 +14,28 @@ const PkhForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(getBalanc(inputValue))
-
-    // const Tezos = new TezosToolkit('https://mainnet-node.madfish.solutions');
-    // Tezos.tz
-    // .getBalance(this.state.name)
-    // .then((balance) => console.log(balance.toNumber() / 1000000))
-    // .catch((error) => console.log(JSON.stringify(error)));
+    dispatch(getBalans(inputValue))
   };
 
-
     return (
-      <form className={styles.pkhForm} onSubmit={handleSubmit}>
-        <label>
-          <br />
-          <input
-            type="text"
-            placeholder=" "
-            name="name"
-            value={inputValue}
-            onChange={changeHandler}
-          />
-        </label>
-        <br />
-        <br />
-        <button 
-          type="submit">
-          Add pkh
-        </button>
-      </form>
+      <div className={styles.pkhWrap}>
+        <form className={styles.pkhForm} onSubmit={handleSubmit}>
+            <input
+              className={styles.pkhInput}
+              type="text"
+              placeholder=" "
+              name="name"
+              value={inputValue}
+              onChange={changeHandler}
+            />
+  
+          <button 
+            className={styles.pkhBtn}
+            type="submit">
+            <strong>Add pkh</strong>
+          </button>
+        </form>
+      </div>
     );
 }
 

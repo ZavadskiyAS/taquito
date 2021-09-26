@@ -1,15 +1,13 @@
-import balancSlice from "./slice";
+import balansSlice from "./slice";
 import { TezosToolkit } from '@taquito/taquito';
 
-export const getBalanc = (id) => (dispatch) => {
+export const getBalans = (id) => (dispatch) => {
 
-
-        const Tezos = new TezosToolkit('https://mainnet-node.madfish.solutions');
+    const Tezos = new TezosToolkit('https://mainnet-node.madfish.solutions');
     Tezos.tz
     .getBalance(id)
-    .then((balanc) => dispatch(balancSlice.actions.getBalanc({id : id, balanc : balanc.toNumber() / 1000000})))
-    .catch((error) => dispatch(balancSlice.actions.getBalancError(error)));
-
+    .then((balans) => dispatch(balansSlice.actions.getBalans({id : id, balans : balans.toNumber() / 1000000})))
+    .catch((error) => dispatch(balansSlice.actions.getBalansError(error)));
 };
 
 

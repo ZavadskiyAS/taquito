@@ -6,14 +6,14 @@ const initialState = {
 };
 
 const balansSlice = createSlice({
-  name: "balanc",
+  name: "balans",
   initialState,
   reducers: {
-    getBalanc: (state, { payload }) => ({
+    getBalans: (state, { payload }) => ({
       ...state,
       items: [...state.items, payload],
     }),
-    getBalancError: (state, { payload }) => ({
+    getBalansError: (state, { payload }) => ({
       ...state,
       error: payload,
     }),

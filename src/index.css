@@ -68,3 +68,7 @@ button:active,
 button:focus {
   outline: none;
 }
+
+body {
+  background-image: url(./img/bg.jpg);
+}
