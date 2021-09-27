@@ -13,7 +13,6 @@ const persistConfig = {
     whitelist: ['balans'],
   };
 const rootReducer = combineReducers({
-    // [sessionSlice.name]: persistReducer(persistConfig, sessionSlice.reducer),
     [loaderSlice.name]: persistReducer(persistConfig, loaderSlice.reducer),
     [loaderSlice.name]: loaderSlice.reducer,
 });

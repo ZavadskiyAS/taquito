@@ -6,7 +6,6 @@
 .pkhForm {
   display: flex;
   justify-content: center;
-  /* background: #fff; */
   width: 700px;
   padding: 5px;
   margin-bottom: 20px;
@@ -21,5 +20,4 @@
   width: 70px;
   height: 30px;
   background-color: rgb(218, 206, 206);
-
 }

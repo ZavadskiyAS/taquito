@@ -9,6 +9,7 @@ const PkhList = () => {
 const dataList = useSelector(({balans})=> balans.items)
 
   return (
+  <>
     <ul className={styles.list}>
       {dataList &&
         dataList.map(pkh => (
@@ -18,6 +19,7 @@ const dataList = useSelector(({balans})=> balans.items)
 
         ))}
     </ul>
+  </>
   );
 };
 
